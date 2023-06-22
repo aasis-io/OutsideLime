@@ -1,72 +1,109 @@
-// document.addEventListener("click", function (event) {
-//   var dropdowns = document.querySelectorAll(".nav-list > li.dropdown.active");
-//   for (var i = 0; i < dropdowns.length; i++) {
-//     if (!dropdowns[i].contains(event.target)) {
-//       dropdowns[i].classList.remove("active");
-//     }
-//   }
-// });
 
-// var dropdownToggle = document.querySelectorAll(".nav-list > li.dropdown > a");
-// for (var i = 0; i < dropdownToggle.length; i++) {
-//   dropdownToggle[i].addEventListener("click", function (event) {
-//     var dropdown = this.parentNode;
-//     if (dropdown.classList.contains("active")) {
-//       dropdown.classList.remove("active");
-//     } else {
-//       var activeDropdowns = document.querySelectorAll(
-//         ".nav-list > li.dropdown.active"
-//       );
-//       for (var j = 0; j < activeDropdowns.length; j++) {
-//         activeDropdowns[j].classList.remove("active");
-//       }
-//       dropdown.classList.add("active");
-//     }
-//     event.preventDefault();
-//   });
-// }
+/*=============================
+Main - Dropdown Toggler
+=====================*/
 
-// var dropdownSubmenuToggle = document.querySelectorAll(
-//   ".drop-mega > .dropdown-menu > li > a"
-// );
-// for (var i = 0; i < dropdownSubmenuToggle.length; i++) {
-//   dropdownSubmenuToggle[i].addEventListener("click", function (event) {
-//     var dropdownSubmenu = this.parentNode;
-//     if (dropdownSubmenu.classList.contains("level-active")) {
-//       dropdownSubmenu.classList.remove("level-active");
-//     } else {
-//       var activeDropdownSubmenus = document.querySelectorAll(
-//         ".drop-mega > .dropdown-menu > li.level-active"
-//       );
-//       for (var j = 0; j < activeDropdownSubmenus.length; j++) {
-//         activeDropdownSubmenus[j].classList.remove("level-active");
-//       }
-//       dropdownSubmenu.classList.add("level-active");
-//     }
-//     event.preventDefault();
-//   });
-// }
 
-// const navbarToggle = document.querySelector(".navbar-toggle");
-// const bars = document.querySelector(".fa-bars");
-// const navbar = document.querySelector(".my-navbar");
+document.addEventListener("click", function (event) {
+  var dropdowns = document.querySelectorAll(".nav-list > li.dropdown.active");
+  for (var i = 0; i < dropdowns.length; i++) {
+    if (!dropdowns[i].contains(event.target)) {
+      dropdowns[i].classList.remove("active");
+    }
+  }
+});
 
-// navbarToggle.addEventListener("click", (e) => {
-//   e.stopPropagation();
-//   navbar.classList.toggle("show-navbar");
-//   navbarToggle.classList.toggle("toggle-color");
-//   bars.classList.toggle("fa-xmark");
-// });
+var dropdownToggle = document.querySelectorAll(".nav-list > li.dropdown > a");
+for (var i = 0; i < dropdownToggle.length; i++) {
+  dropdownToggle[i].addEventListener("click", function (event) {
+    var dropdown = this.parentNode;
+    if (dropdown.classList.contains("active")) {
+      dropdown.classList.remove("active");
+    } else {
+      var activeDropdowns = document.querySelectorAll(
+        ".nav-list > li.dropdown.active"
+      );
+      for (var j = 0; j < activeDropdowns.length; j++) {
+        activeDropdowns[j].classList.remove("active");
+      }
+      dropdown.classList.add("active");
+    }
+    event.preventDefault();
+  });
+}
 
-// document.addEventListener("click", (e) => {
-//   if (!navbar.contains(e.target)) {
-//     navbar.classList.remove("show-navbar");
-//     navbarToggle.classList.remove("toggle-color");
-//     bars.classList.remove("fa-xmark");
-//   }
-// });
 
-// // // Get the elements
+/*=============================
+Sub - Dropdown Toggler
+=====================*/
+
+var dropdownSubmenuToggle = document.querySelectorAll(
+  ".drop-mega:first-child > .dropdown-menu > li > a"
+);
+for (var i = 0; i < dropdownSubmenuToggle.length; i++) {
+  dropdownSubmenuToggle[i].addEventListener("click", function (event) {
+    var dropdownSubmenu = this.parentNode;
+    if (dropdownSubmenu.classList.contains("level-active")) {
+      dropdownSubmenu.classList.remove("level-active");
+    } else {
+      var activeDropdownSubmenus = document.querySelectorAll(
+        ".drop-mega:first-child > .dropdown-menu > li.level-active"
+      );
+      for (var j = 0; j < activeDropdownSubmenus.length; j++) {
+        activeDropdownSubmenus[j].classList.remove("level-active");
+      }
+      dropdownSubmenu.classList.add("level-active");
+    }
+    event.preventDefault();
+  });
+}
+var dropdownSubmenuToggle2 = document.querySelectorAll(
+  ".drop-mega:nth-child(4) > .dropdown-menu > li > a"
+);
+for (var i = 0; i < dropdownSubmenuToggle2.length; i++) {
+  dropdownSubmenuToggle2[i].addEventListener("click", function (event) {
+    var dropdownSubmenu = this.parentNode;
+    if (dropdownSubmenu.classList.contains("level-active")) {
+      dropdownSubmenu.classList.remove("level-active");
+    } else {
+      var activeDropdownSubmenus = document.querySelectorAll(
+        ".drop-mega:nth-child(4) > .dropdown-menu > li.level-active"
+      );
+      for (var j = 0; j < activeDropdownSubmenus.length; j++) {
+        activeDropdownSubmenus[j].classList.remove("level-active");
+      }
+      dropdownSubmenu.classList.add("level-active");
+    }
+    event.preventDefault();
+  });
+}
+
+/*=============================
+Mobile - Dropdown Toggler
+=====================*/
+
+const navbarToggle = document.querySelector(".navbar-toggle");
+const bars = document.querySelector(".fa-bars");
+const navbar = document.querySelector(".my-navbar");
+
+navbarToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  navbar.classList.toggle("show-navbar");
+  navbarToggle.classList.toggle("toggle-color");
+  bars.classList.toggle("fa-xmark");
+});
+
+document.addEventListener("click", (e) => {
+  if (!navbar.contains(e.target)) {
+    navbar.classList.remove("show-navbar");
+    navbarToggle.classList.remove("toggle-color");
+    bars.classList.remove("fa-xmark");
+  }
+});
+
+/*=============================
+Search Bar Toggler
+=====================*/
 const searchIcon = document.querySelector(".fa-magnifying-glass");
 const searchButton = document.querySelector(".search-toggler");
 const searchContainer = document.querySelector(".input-box");
@@ -93,6 +130,10 @@ document.addEventListener("click", function (event) {
     searchContainer.classList.add("hidden-search-bar");
   }
 });
+
+/*=============================
+Slider Initializer
+=====================*/
 
 new Splide(".splide", {
   type: "fade",
@@ -132,6 +173,12 @@ new Splide(".splide", {
 //   thumbnails.mount();
 // });
 
+
+
+/*=============================
+Testimonial Slider Initializer
+=====================*/
+
 const swiperT = new Swiper(".swiperTest", {
   // Optional parameters
   autoHeight: true,
@@ -153,6 +200,8 @@ const swiperT = new Swiper(".swiperTest", {
     prevEl: ".swiper-button-prev-x",
   },
 });
+
+
 
 // // let calcScrollValue = () => {
 // //   let scrollProgress = document.getElementById("progress");

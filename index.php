@@ -264,53 +264,86 @@ include('header.php');
 <!--Featured Trips-->
 <section class="featured">
 	<div class="container">
-		<div class="title-box"><span>Featured Trips</span></div>
+		<div class="title-box">
+			<span>Recommended Trips</span>
+			<h3>Featured Trips</></div>
 		<section id="demos">
 			<div class="row">
-
 				<div class="owl-carousel owl-theme">
-
-
 					<div class="item">
-						<a class="ft-image" href=""> <img src="images/marriage.jpg" alt="" class="trek-thumb" />
+						<a class="ft-image" href=""> <img src="images/abc-yoga.jpg" alt="" class="trek-thumb" />
 						</a>
 						<main class="ft-detail">
-							<div class="duration-grade">
-								<div class="dt-box">
-									<span class="trip-duration"><i class="fa-solid fa-calendar-days"></i></span>
-									<h4>9 Days</h4>
-								</div>
-								<div class="trip-grade"><span class="trip-chart"><i class="fa-solid fa-tags"></i></span>
-									<h4>8999</h4>
-								</div>
-							</div>
 							<div class="title">
 								<a href="">
-									<h3> Marriage in Everest Base Camp
+									<h3> Annapurna Yoga Trek
 									</h3>
 								</a>
+							</div>
+							<div class="duration-grade">
+								<span>15 Days<strong>|</strong>USD 1245</span>
+							</div>
+							<div class="review">
+								<div class="stars">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</div>
+								<span>Based on <p>45</p> Reviews</span>
 							</div>
 						</main>
 
 					</div>
 					<div class="item">
-						<a class="ft-image" href=""> <img src="images/tiji.jpg" alt="" class="trek-thumb" />
+						<a class="ft-image" href=""> <img src="images/blog-ktm.jpg" alt="" class="trek-thumb" />
 						</a>
 						<main class="ft-detail">
-							<div class="duration-grade">
-								<div class="dt-box">
-									<span class="trip-duration"><i class="fa-solid fa-calendar-days"></i></span>
-									<h4>13 Days</h4>
-								</div>
-								<div class="trip-grade"><span class="trip-chart"><i class="fa-solid fa-tags"></i></span>
-									<h4>2655</h4>
-								</div>
-							</div>
 							<div class="title">
 								<a href="">
-									<h3>Tiji Festival Trek
+									<h3> Kathmandu Heritage Tour
 									</h3>
 								</a>
+							</div>
+							<div class="duration-grade">
+								<span>3 Days<strong>|</strong>USD 450</span>
+							</div>
+							<div class="review">
+								<div class="stars">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</div>
+								<span>Based on <p>29</p> Reviews</span>
+							</div>
+						</main>
+
+					</div>
+					<div class="item">
+						<a class="ft-image" href=""> <img src="images/mustang.jpg" alt="" class="trek-thumb" />
+						</a>
+						<main class="ft-detail">
+							<div class="title">
+								<a href="">
+									<h3> Upper Mustang Trek
+									</h3>
+								</a>
+							</div>
+							<div class="duration-grade">
+								<span>17 Days<strong>|</strong>USD 2245</span>
+							</div>
+							<div class="review">
+								<div class="stars">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</div>
+								<span>Based on <p>29</p> Reviews</span>
 							</div>
 						</main>
 
@@ -319,73 +352,60 @@ include('header.php');
 						<a class="ft-image" href=""> <img src="images/luxury.jpg" alt="" class="trek-thumb" />
 						</a>
 						<main class="ft-detail">
-							<div class="duration-grade">
-								<div class="dt-box">
-									<span class="trip-duration"><i class="fa-solid fa-calendar-days"></i></span>
-									<h4>12 Days</h4>
-								</div>
-								<div class="trip-grade"><span class="trip-chart"><i class="fa-solid fa-tags"></i></span>
-									<h4>$3699</h4>
-								</div>
-							</div>
 							<div class="title">
 								<a href="">
-									<h3>Everest Luxury Trek</h3>
-								</a>
-							</div>
-						</main>
-
-
-					</div>
-
-					<div class="item">
-						<a class="ft-image" href=""> <img src="images/tilicho-lake.jpg" alt="" class="trek-thumb" />
-						</a>
-						<main class="ft-detail">
-							<div class="duration-grade">
-								<div class="dt-box">
-									<span class="trip-duration"><i class="fa-solid fa-calendar-days"></i></span>
-									<h4>17 Days</h4>
-								</div>
-								<div class="trip-grade"><span class="trip-chart"><i class="fa-solid fa-tags"></i></span>
-									<h4>1455</h4>
-								</div>
-							</div>
-							<div class="title">
-								<a href="">
-									<h3>Tilicho Lake Trekking
+									<h3> Everest Luxury Trek
 									</h3>
 								</a>
 							</div>
+							<div class="duration-grade">
+								<span>12 Days<strong>|</strong>USD 2455</span>
+							</div>
+							<div class="review">
+								<div class="stars">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</div>
+								<span>Based on <p>45</p> Reviews</span>
+							</div>
 						</main>
 
-
 					</div>
-
 					<div class="item">
 						<a class="ft-image" href=""> <img src="images/phoksundo.jpg" alt="" class="trek-thumb" />
 						</a>
 						<main class="ft-detail">
-							<div class="duration-grade">
-								<div class="dt-box">
-									<span class="trip-duration"><i class="fa-solid fa-calendar-days"></i></span>
-									<h4>18 Days</h4>
-								</div>
-								<div class="trip-grade"><span class="trip-chart"><i class="fa-solid fa-tags"></i></span>
-									<h4>1985</h4>
-								</div>
-							</div>
 							<div class="title">
 								<a href="">
-									<h3>Shey Phoksundo Trek
+									<h3> Shey Phoksundo Trek
 									</h3>
 								</a>
+							</div>
+							<div class="duration-grade">
+								<span>20 Days<strong>|</strong>USD 2685</span>
+							</div>
+							<div class="review">
+								<div class="stars">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</div>
+								<span>Based on <p>45</p> Reviews</span>
 							</div>
 						</main>
 
 					</div>
 
 
+				</div>
+
+				<div class="see-more">
+					<a href="">See More <i class="fa-solid fa-arrow-right"></i></a>
 				</div>
 			</div>
 		</section>

@@ -1,28 +1,28 @@
-document.addEventListener("click", function (event) {
-  var dropdowns = document.querySelectorAll(".nav-list > li.dropdown.active");
-  for (var i = 0; i < dropdowns.length; i++) {
-    if (!dropdowns[i].contains(event.target)) {
-      dropdowns[i].classList.remove("active");
-    }
-  }
-});
+// document.addEventListener("click", function (event) {
+//   var dropdowns = document.querySelectorAll(".nav-list > li.dropdown.active");
+//   for (var i = 0; i < dropdowns.length; i++) {
+//     if (!dropdowns[i].contains(event.target)) {
+//       dropdowns[i].classList.remove("active");
+//     }
+//   }
+// });
 
-var dropdownToggle = document.querySelectorAll(".nav-list > li.dropdown > a");
-for (var i = 0; i < dropdownToggle.length; i++) {
-  dropdownToggle[i].addEventListener("click", function (event) {
-    var dropdown = this.parentNode;
-    if (dropdown.classList.contains("active")) {
-      dropdown.classList.remove("active");
-    } else {
-      var activeDropdowns = document.querySelectorAll(".nav-list > li.dropdown.active");
-      for (var j = 0; j < activeDropdowns.length; j++) {
-        activeDropdowns[j].classList.remove("active");
-      }
-      dropdown.classList.add("active");
-    }
-    event.preventDefault();
-  });
-}
+// var dropdownToggle = document.querySelectorAll(".nav-list > li.dropdown > a");
+// for (var i = 0; i < dropdownToggle.length; i++) {
+//   dropdownToggle[i].addEventListener("click", function (event) {
+//     var dropdown = this.parentNode;
+//     if (dropdown.classList.contains("active")) {
+//       dropdown.classList.remove("active");
+//     } else {
+//       var activeDropdowns = document.querySelectorAll(".nav-list > li.dropdown.active");
+//       for (var j = 0; j < activeDropdowns.length; j++) {
+//         activeDropdowns[j].classList.remove("active");
+//       }
+//       dropdown.classList.add("active");
+//     }
+//     event.preventDefault();
+//   });
+// }
 
 var dropdownSubmenuToggle = document.querySelectorAll(
   ".drop-mega > .dropdown-menu > li > a"
@@ -45,24 +45,24 @@ for (var i = 0; i < dropdownSubmenuToggle.length; i++) {
   });
 }
 
-const navbarToggle = document.querySelector(".navbar-toggle");
-const bars = document.querySelector(".fa-bars");
-const navbar = document.querySelector("nav");
+// const navbarToggle = document.querySelector(".navbar-toggle");
+// const bars = document.querySelector(".fa-bars");
+// const navbar = document.querySelector("nav");
 
-navbarToggle.addEventListener("click", (e) => {
-  e.stopPropagation();
-  navbar.classList.toggle("show-navbar");
-  navbarToggle.classList.toggle("toggle-color");
-  bars.classList.toggle("fa-xmark");
-});
+// navbarToggle.addEventListener("click", (e) => {
+//   e.stopPropagation();
+//   navbar.classList.toggle("show-navbar");
+//   navbarToggle.classList.toggle("toggle-color");
+//   bars.classList.toggle("fa-xmark");
+// });
 
-document.addEventListener("click", (e) => {
-  if (!navbar.contains(e.target)) {
-    navbar.classList.remove("show-navbar");
-    navbarToggle.classList.remove("toggle-color");
-    bars.classList.remove("fa-xmark");
-  }
-});
+// document.addEventListener("click", (e) => {
+//   if (!navbar.contains(e.target)) {
+//     navbar.classList.remove("show-navbar");
+//     navbarToggle.classList.remove("toggle-color");
+//     bars.classList.remove("fa-xmark");
+//   }
+// });
 
 // // Get the elements
 // const searchIcon = document.querySelector(".fa-magnifying-glass");
