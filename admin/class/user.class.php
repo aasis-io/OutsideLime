@@ -5,7 +5,7 @@ class User{
            $status, $role, $last_login;
 
     public function login(){
-        $conn = mysqli_connect('localhost', 'root', '', 'data_shikhar');
+        $conn = mysqli_connect('localhost', 'root', '', 'outsideLime');
         $encryptedPassword = md5($this->password);
         $sql = "select * from users where 
                  username='$this->username' and 

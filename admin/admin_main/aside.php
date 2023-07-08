@@ -1,7 +1,7 @@
 <aside id="sidebar" class="sidebar">
     <ul class="sidebar-nav" id="sidebar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="dashboard.php">
                 <i class="bi bi-grid"></i> <span>Dashboard</span>
             </a>
         </li>
@@ -13,12 +13,12 @@
             </a>
             <ul id="slider-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="tables-general.html">
+                    <a href="uploadSlider.php">
                         <i class="bi bi-circle"></i><span>Add Carousel</span>
                     </a>
                 </li>
                 <li>
-                    <a href="tables-data.html">
+                    <a href="manageSlider.php">
                         <i class="bi bi-circle"></i><span>Manage Carousel</span>
                     </a>
                 </li>

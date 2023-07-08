@@ -1122,7 +1122,6 @@ body {
 .dashboard-list {
   padding: 0;
   margin: 0 -15px;
-
 }
 
 @media screen and (min-width: 768px) {
@@ -1208,6 +1207,61 @@ body {
 .dashboard-list > li:nth-child(12) > a:hover {
   color: #fff;
   background: var(--light);
+}
+
+.label-inline {
+  display: inline-table;
+}
+.card-body > form label > sup,
+.card-body > form label.red {
+  color: red;
+}
+
+.card-body form input[type="radio"] {
+  -webkit-appearance: none;
+}
+.card-body form label.radio {
+  border: 1px solid #a8a8a8;
+  border-right: 0;
+  padding: 0.4em 0;
+  width: 240px;
+  position: relative;
+  margin: auto;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  color: #3f3f3f;
+  transition: 0.5s;
+  text-align: center;
+}
+.card-body form label.radio.right {
+  border-left: 0;
+  border-right: 1px solid #a8a8a8;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+.card-body form i {
+  font-size: 1em;
+}
+.card-body form label > span {
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.card-body form input.radio-green[type="radio"]:checked + label {
+  background-color: var(--green);
+  color: white;
+  border: 1px solid var(--green);
+}
+.card-body form input.radio-red[type="radio"]:checked + label {
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+}
+
+.card-body table.datatable tbody tr td a.underline:hover {
+  text-decoration: underline;
 }
 
 /*--------------------------------------------------------------

@@ -1,8 +1,6 @@
-
 /*=============================
 Main - Dropdown Toggler
 =====================*/
-
 
 document.addEventListener("click", function (event) {
   var dropdowns = document.querySelectorAll(".nav-list > li.dropdown.active");
@@ -31,7 +29,6 @@ for (var i = 0; i < dropdownToggle.length; i++) {
     event.preventDefault();
   });
 }
-
 
 /*=============================
 Sub - Dropdown Toggler
@@ -142,6 +139,10 @@ new Splide(".splide", {
   // autoplay: {
   //   delay: 5000,
   // },
+  dragMinThreshold: {
+    mouse: 400,
+    touch: 10,
+  },
 }).mount();
 
 // $(".collapse").collapse();
@@ -173,8 +174,6 @@ new Splide(".splide", {
 //   thumbnails.mount();
 // });
 
-
-
 /*=============================
 Testimonial Slider Initializer
 =====================*/
@@ -200,8 +199,6 @@ const swiperT = new Swiper(".swiperTest", {
     prevEl: ".swiper-button-prev-x",
   },
 });
-
-
 
 // // let calcScrollValue = () => {
 // //   let scrollProgress = document.getElementById("progress");

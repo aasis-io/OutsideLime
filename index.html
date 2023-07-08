@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drag and Drop Table Sorting</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    .ui-state-default {
+      cursor: move;
+    }
+  </style>
+</head>
+<body>
+  <table id="sortable-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Item</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-id="1">
+        <td class="handle">1</td>
+        <td>Apple</td>
+        <td>10</td>
+      </tr>
+      <tr data-id="2">
+        <td class="handle">2</td>
+        <td>Orange</td>
+        <td>15</td>
+      </tr>
+      <tr data-id="3">
+        <td class="handle">3</td>
+        <td>Banana</td>
+        <td>8</td>
+      </tr>
+      <tr data-id="4">
+        <td class="handle">4</td>
+        <td>Grapes</td>
+        <td>20</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#sortable-table tbody").sortable({
+        handle: ".handle",
+        update: function(event, ui) {
+          // Get the sorted order of rows
+          var sortedIDs = $(this).sortable("toArray", { attribute: "data-id" });
+          
+          // Perform any necessary actions with the sorted order
+          console.log(sortedIDs);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -57,7 +57,7 @@ include('aside.php') ?>
       </a>
     </li>
     <li class="col-md-12 col-lg-4">
-      <a href="index.html" class="home-dash">
+      <a href="manageSlider.php" class="home-dash">
         <i class="fa-solid fa-camera"></i>
         <h5>Home Slider</h5>
       </a>

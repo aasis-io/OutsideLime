@@ -110,6 +110,7 @@ body {
   background: #113763;
   color: #fff;
   gap: 16px;
+  display: none;
 }
 
 .cta-policy > i {
@@ -386,7 +387,7 @@ NAVBAR START
 
 .nav-list > li > a:hover i,
 .nav-list > li:hover > a i {
-  transform: rotate(-15deg);
+  /* transform: rotate(-15deg); */
   color: var(--clr-piction-blue-main);
 }
 
@@ -412,7 +413,7 @@ NAVBAR START
   border-bottom: none;
 }
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .mega-menu > .dropdown > .dropdown-menu {
     display: none;
   }
@@ -420,8 +421,15 @@ NAVBAR START
   .mega-menu > .dropdown:hover .dropdown-menu {
     display: block;
   }
+} */
+@media (max-width: 991px) {
+  .mega-menu > .dropdown > .dropdown-menu {
+    display: none;
+  }
+  .mega-menu > .dropdown.active .dropdown-menu {
+    display: block;
+  }
 }
-
 @media (min-width: 991px) {
   .mega-menu > .dropdown > .dropdown-menu {
     position: absolute;
@@ -768,7 +776,7 @@ Search Bar
 .mySwiper {
   height: 600px;
   width: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 1rem;
 }
 
 .splide {
@@ -793,23 +801,23 @@ Search Bar
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  animation: leaves 10s ease-in-out infinite alternate;
+  /* animation: leaves 10s ease-in-out infinite alternate; */
 }
-@keyframes leaves {
+/* @keyframes leaves {
   0% {
     transform: scale(1);
   }
   100% {
     transform: scale(1.1);
   }
-}
+} */
 
 .mySwiper .splide__list .splide__slide::before {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.16);
+  background-color: rgba(0, 0, 0, 0.12);
 }
 .mySwiper .splide__list .splide__slide .image-data {
   position: absolute;
@@ -820,12 +828,13 @@ Search Bar
   width: 100%;
 }
 .image-data span {
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   color: #fff;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  letter-spacing: 0.4px;
 }
 .image-data h2 {
   font-size: 36px;
@@ -1008,17 +1017,21 @@ Search Bar
 .venture {
   background: #fff;
   padding: 1.25rem 0;
-  padding-bottom: 6rem;
+  padding-bottom: 5em;
+}
+.title-wrap {
+  padding: 0 10px;
+  text-align: center;
+
 }
 .title-wrap > span {
   position: relative;
-  display: inline-block;
+  /* display: flex; */
   font-size: 15px;
   line-height: 18px;
   color: var(--clr-piction-blue-main);
   font-weight: 600;
   letter-spacing: 0.075em;
-  margin-left: 34px;
   z-index: 0;
   padding-bottom: 5px;
   border-radius: 8px;
@@ -1033,31 +1046,25 @@ Search Bar
   background-color: var(--clr-piction-blue-main);
   content: "";
 }
-.venture-title {
-  display: flex;
-  justify-content: space-between;
+.title-wrap > span:after {
+  position: absolute;
+  right: -32px;
+  top: 8px;
+  width: 25px;
+  height: 3px;
+  background-color: var(--clr-piction-blue-main);
+  content: "";
 }
-.venture .title-left > h2 {
+
+
+.venture .title-center > h2 {
   margin-top: 10px;
   font-weight: 800;
   font-size: 2.25em;
   color: var(--clr-dark-blue);
 }
 
-.title-right > a {
-  padding: 12px 14px;
-  background: #fff;
-  color: var(--clr-piction-blue-main);
-  border-radius: 8px;
-  border: 3px solid var(--clr-piction-blue-main);
-  font-weight: 600;
-  transition: 0.3s ease-in-out;
-}
 
-.title-right > a:hover {
-  background: var(--clr-piction-blue-main);
-  color: #fff;
-}
 
 @media (min-width: 1200px) {
   .venture .col-xl-4 {
@@ -1074,102 +1081,18 @@ Search Bar
 
 @media (min-width: 1400px) {
   .venture .container {
-    max-width: 1320px;
+    max-width: 1300px;
   }
 }
 
 .vt-card {
   width: 100%;
   max-width: 410px;
-  background-color: var(--white);
-  margin: 36px auto;
-  padding: 0;
+  background-color: var(--clr-white);
+  margin: 1.2em auto;
+  padding: 0.5em;
   transition: 0.5s ease-in-out;
   position: relative;
-  border-radius: 4px;
-}
-
-.vt-card .main-content {
-  text-align: center;
-}
-
-.vt-card main div.flex-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0.5rem 0 0 0;
-}
-
-.vt-card main div.coin-base,
-.vt-card main div.flex-row .cost,
-.vt-card main .time-left,
-.vt-card main .vt-more {
-  display: flex;
-  align-items: center;
-  padding: 0.5em 0;
-}
-.vt-card main h1 {
-  color: var(--clr-text);
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.vt-card main div.flex-row .coin-base {
-  margin: 0 1rem;
-}
-.vt-card main div.flex-row .coin-base span {
-  margin-right: 5px;
-  font-weight: 500;
-  color: var(--clr-orange);
-}
-
-.vt-card main div.flex-row .coin-base h2,
-.vt-card main div.flex-row .cost h2 {
-  font-size: 16px;
-  line-height: 1;
-  margin: 0;
-  font-weight: 600;
-  color: var(--clr-orange);
-}
-
-.vt-card main div.flex-row .cost span {
-  font-weight: 600;
-  margin-right: 5px;
-  transform: rotate(90deg);
-
-  color: var(--clr-orange);
-}
-
-.vt-card .vt-more {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0.4rem;
-}
-
-.vt-card .vt-more a {
-  background: var(--clr-primary-dark);
-  padding: 11px 9px;
-  color: white;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  font-weight: 600;
-}
-
-.vt-card .vt-more a i {
-  font-size: 13px;
-  margin-left: 4px;
-  transition: all 0.3s ease;
-}
-
-.vt-card .vt-more a:hover {
-  background: var(--clr-light-primary);
-  color: white;
-}
-
-.vt-card .vt-more a:hover i {
-  transform: translate(2px, 0);
 }
 
 a.vt-image {
@@ -1177,18 +1100,38 @@ a.vt-image {
   display: block;
   margin: auto;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 a.vt-image .image {
   width: 100%;
   transition: all 0.6s;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 a.vt-image:hover .image {
   transform: scale(1.02);
 }
 
+.vt-card .main-content {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.vt-card main > a > h1 {
+  color: var(--clr-text);
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.vt-card main .price-time span {
+  color: var(--clr-curious-blue);
+  font-weight: 600;
+  font-family: var(--ff-secondary);
+}
+.vt-card main .price-time span > span {
+  margin: 0 4px;
+}
 /* ============================
 About Us
 ===================================== */
@@ -1267,6 +1210,7 @@ About Us
 
 .featured .title-box {
   margin: 20px 0;
+  padding: 10px;
 }
 
 .featured .title-box > span {
@@ -1679,7 +1623,7 @@ About Us
 /*slider*/
 
 .testi :is(.swiper-button-next-y, .swiper-button-prev-x) {
-  background-color: var(--gray);
+  background-color: #bdbdbd;
   top: 35%;
   width: 38px;
   height: 38px;

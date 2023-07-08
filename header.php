@@ -1,3 +1,14 @@
+<?php
+@session_start();
+require_once('admin/class/slider.class.php');
+
+
+
+$sliderObject = new Slider();
+$sliderList = $sliderObject->getAllSlider();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +47,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   <link rel="icon" href="images/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"><!-- 180×180 -->
   <link rel="manifest" href="/manifest.webmanifest">
-  <title alt="Shikhar Adventure - Treks | Tours | Hikes in Nepal">Shikhar Adventure - Treks | Tours | Hikes in Nepal</title>
+  <title alt="Shikhar Adventure - Treks | Tours | Hikes in Nepal">Treks | Tours | Hikes in Nepal - Shikhar Adventure</title>
 </head>
 
 
