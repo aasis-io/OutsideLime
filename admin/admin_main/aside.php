@@ -47,7 +47,7 @@
             </a>
             <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="components-alerts.html">
+                    <a href="uploadCategory.php">
                         <i class="bi bi-circle"></i><span>New Category</span>
                     </a>
                 </li>

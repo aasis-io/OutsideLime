@@ -75,6 +75,12 @@ for (var i = 0; i < dropdownSubmenuToggle2.length; i++) {
   });
 }
 
+
+var parentList = document.getElementById('parent_drop');
+var firstChild = parentList.querySelector('li:first-child');
+firstChild.classList.add('level-active');
+
+
 /*=============================
 Mobile - Dropdown Toggler
 =====================*/

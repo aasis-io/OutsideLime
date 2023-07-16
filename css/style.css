@@ -11,7 +11,7 @@
   --clr-curious-blue: #2a93d5;
   --clr-primary-dark: #125488;
   --clr-dark-blue: #021a40;
-  --clr-orange: #ff6a00;
+  --clr-orange: #ee6c0f;
   --clr-light-primary: #2565ae;
   --clr-text: #323232;
   --gray: #a9a9a9;
@@ -443,6 +443,7 @@ NAVBAR START
     visibility: hidden;
     transition: 0.4s ease;
     border-radius: 6px;
+    overflow-y: auto;
   }
 
   .mega-menu > .dropdown.active .dropdown-menu {
@@ -817,43 +818,70 @@ Search Bar
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.12);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .mySwiper .splide__list .splide__slide .image-data {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: left;
+  text-align: center;
   width: 100%;
 }
 .image-data span {
-  font-size: 16px;
-  font-weight: 400;
+  display: block;
+  font-weight: 500;
+  text-transform: uppercase;
   color: #fff;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.2px;
+  font-family: "Rubik";
+  opacity: 0;
+  transform: translateX(10%);
+  transition: transform 1.2s, opacity 1.2s;
 }
+
+.mySwiper .splide__slide.is-active .image-data span {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .image-data h2 {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 600;
   color: #fff;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  opacity: 0;
+  transform: translateX(-10%);
+  transition: transform 1s, opacity 1s;
+}
+
+.mySwiper .splide__slide.is-active .image-data h2 {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .image-data a.trip-detail-btn {
   display: inline-block;
-  padding: 9px 10px;
-  border-radius: 6px;
-  color: var(--dark);
+  padding: 10px 16px;
+  border-radius: 25px;
+  color: var(--clr-white);
   margin-top: 4px;
   font-weight: 600;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--clr-orange);
   /* backdrop-filter: blur(1px); */
+  opacity: 0;
+  transform: translateX(-10%);
+  transition: transform 1s, opacity 1s;
+}
+
+.mySwiper .splide__slide.is-active .image-data a.trip-detail-btn {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .image-data a.trip-detail-btn i {
@@ -862,7 +890,7 @@ Search Bar
   transition: all 0.3s ease-in-out;
 }
 .image-data a.trip-detail-btn:hover {
-  box-shadow: 0 0 5px 1px #ffffff;
+  box-shadow: 0 0 5px 1px var(--clr-orange);
 }
 
 .splide__arrow {
@@ -914,13 +942,9 @@ Search Bar
 
   .image-data a.trip-detail-btn {
     display: inline-block;
-    padding: 8px 9px;
-    border-radius: 6px;
-    color: var(--dark);
+    padding: 12px 16px;
+    border-radius: 25px;
     margin-top: 4px;
-    font-weight: 500;
-    background-color: rgba(255, 255, 255, 1);
-    backdrop-filter: blur(1px);
   }
 
   .image-data a.trip-detail-btn i {
@@ -947,13 +971,9 @@ Search Bar
 
   .image-data a.trip-detail-btn {
     display: inline-block;
-    padding: 7px 8px;
-    border-radius: 6px;
-    color: var(--dark);
+    padding: 10px 14px;
+    border-radius: 25px;
     margin-top: 4px;
-    font-weight: 500;
-    background-color: rgba(255, 255, 255, 1);
-    backdrop-filter: blur(1px);
   }
 
   .image-data a.trip-detail-btn i {
@@ -967,7 +987,7 @@ Search Bar
     height: 360px;
   }
   .image-data span {
-    font-size: 15px;
+    font-size: 14px;
   }
   .image-data h2 {
     font-size: 24px;
@@ -975,14 +995,10 @@ Search Bar
 
   .image-data a.trip-detail-btn {
     display: inline-block;
-    padding: 7px 8px;
-    border-radius: 5px;
-    color: var(--dark);
+    padding: 9px 12px;
     margin-top: 3px;
-    font-weight: 500;
-    background-color: rgba(255, 255, 255, 1);
-    backdrop-filter: blur(1px);
     font-size: 14px;
+    border-radius: 25px;
   }
 
   .image-data a.trip-detail-btn i {
@@ -1022,7 +1038,6 @@ Search Bar
 .title-wrap {
   padding: 0 10px;
   text-align: center;
-
 }
 .title-wrap > span {
   position: relative;
@@ -1056,15 +1071,12 @@ Search Bar
   content: "";
 }
 
-
 .venture .title-center > h2 {
   margin-top: 10px;
   font-weight: 800;
   font-size: 2.25em;
   color: var(--clr-dark-blue);
 }
-
-
 
 @media (min-width: 1200px) {
   .venture .col-xl-4 {
@@ -1169,11 +1181,12 @@ About Us
 .my-intro .intro-card .intro-text {
   text-align: center;
 }
-.my-intro .intro-card .intro-text p {
+.my-intro .intro-card .intro-text > p {
   color: #000;
   margin: 32px;
 }
-.my-intro .intro-card .intro-text b {
+.my-intro .intro-card .intro-text > p > strong,
+.my-intro .intro-card .intro-text > p > a {
   color: var(--clr-curious-blue);
   font-weight: 500;
 }

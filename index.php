@@ -36,10 +36,10 @@ include('header.php');
 						</div>
 					</li>
 
+
 				<?php
 				}
 				?>
-
 
 			</ul>
 		</div>
@@ -49,7 +49,7 @@ include('header.php');
 <section class="venture">
 	<div class="container">
 		<div class="title-wrap">
-			<span>Popular Trips</span>
+			<span>Trending Packages</span>
 			<div class="venture-title">
 				<div class="title-center">
 					<h2 class="en-title">Our Best Selling Trips</h2>
@@ -163,28 +163,27 @@ include('header.php');
 		<div class="row">
 			<div class="col-xl-9 mx-auto">
 				<div class="wl-title"><span class="my-title">Welcome To Shikhar Adventure</span>
+					<?php
+					foreach ($aboutMe as $about) {
+					?>
+						<span class="sh-title"><?php echo $about["title"] ?></span>
+					<?php
+					}
+					?>
 
-					<span class="sh-title">Create unforgettable lifetime experience in Himalayas with Shikhar Adventure.</span>
 				</div>
 				<div class="row">
 
 					<div class="intro-card">
 
 						<div class="intro-text">
-							<p><b>Shikhar Adventure</b> is a leading trekking agency in Nepal, owned and operated by <b><u>Dambar Thapa</u></b>,<br>
-								a seasoned trekking guide with over a decade of experience in the industry. With a team of experienced and knowledgeable
-								guides, <b>Shikhar Adventure</b> offers a wide range of trekking packages to suit every level of trekker,<br> from beginners
-								to experienced adventurers.</p>
-							<p><b>We</b> are dedicated to giving our clients the best trekking experience in Nepal. We specialize in
-								organizing trekking <br> tours to some of the most beautiful locations in the Himalayas, such as the <b><u>Everest Base Camp</u></b>,<br>
-								the <b><u>Annapurna Circuit</u></b>, and the <b><u>Langtang Valley</u></b>,
-								among others. With a focus on safety,<br> comfort, and adventure, our <b>trekking</b> packages are designed to
-								provide a one-of-a-kind <br> and unforgettable experience.</p>
-							<p><b>" Your Travel is Our Xenium "</b></p>
-
-							<p>To summarize, <b>Shikhar Adventure</b> is the ideal choice for the ultimate <a href=""><b><u>trekking</u></b></a>experience in <b>Nepal</b>.
-								We guarantee a safe, comfortable, and unforgettable Himalayan adventure with our commitment to sustainable tourism,
-								experienced guides, and personalized services. <a href=""><b><u>Contact us</u></b></a> today to reserve your trekking tour!</p>
+							<?php
+							foreach ($aboutMe as $about) {
+							?>
+								<?php echo htmlspecialchars_decode($about["about_us"]) ?>
+							<?php
+							}
+							?>
 						</div>
 
 						<div class="read-intro">
@@ -194,6 +193,9 @@ include('header.php');
 
 
 				</div>
+
+
+
 			</div>
 		</div>
 	</div>
@@ -206,7 +208,7 @@ include('header.php');
 	<div class="container">
 		<div class="title-box">
 			<span>Recommended Trips</span>
-			<h3>Featured Trips</>
+			<h3>Traveller's Choice</h3>
 		</div>
 		<section id="demos">
 			<div class="row">

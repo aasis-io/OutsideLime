@@ -31,7 +31,7 @@ $sliderList = $sliderObject->retrieve();
     echo     '<div class="alert alert-success alert-dismissible fade show" role="alert"><i class="bi bi-check-circle me-1"></i>' . $successMessage . '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
   }
   ?>
-  <a href="uploadSlider.php"><button class="btn btn-primary" style="margin: 1rem 0;"><i class="bi bi-plus-lg"></i>Add Slider</button></a>
+  <a href="uploadSlider.php"><button class="btn btn-primary" style="margin: 1rem 0; padding: .7em;"><i class="bi bi-plus-lg"></i> Add New Slider</button></a>
 
   <section class="section">
     <div class="row">
@@ -46,8 +46,8 @@ $sliderList = $sliderObject->retrieve();
                   <th scope="col">#</th>
                   <th scope="col">Title</th>
                   <th scope="col">Status</th>
-                  <th scope="col">ID</th>
-                  <th scope="col">Posted Date</th>
+                  <th scope="col" class="hidden-xs">ID</th>
+                  <th scope="col" class="hidden-xs">Posted Date</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>

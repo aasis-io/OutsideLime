@@ -1264,6 +1264,12 @@ body {
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 576px) {
+  .hidden-xs {
+    display: none;
+  }
+}
+
 /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
@@ -1282,4 +1288,24 @@ body {
   text-align: center;
   font-size: 13px;
   color: #012970;
+}
+
+
+.footer > .go-to{
+  margin-top: 1rem;
+  text-align: center;
+}
+.footer > .go-to > a{
+  color: var(--clr-primary);
+  transition: .4s ease;
+  font-size: 1.2em;
+}
+.footer > .go-to > a:hover{
+  color: var(--light);
+}
+
+
+.footer > .go-to > a > i{
+  margin-right: 4px;
+  font-size: 1em;
 }

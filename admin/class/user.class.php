@@ -18,7 +18,7 @@ class User{
             $_SESSION['name']=$data->name;
             $_SESSION['username']=$data->username;
             $_SESSION['role']=$data->role;
-            setcookie('username',$data->username, time() + 60 * 60);
+            setcookie('username',$data->username, time() + 60 * 60 * 60);
             header('location:admin_main/dashboard.php');
         }else{
             $error = "Invalid Credentials!";

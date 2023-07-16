@@ -21,13 +21,13 @@ include('aside.php') ?>
   </div>
   <ul class="dashboard-list">
     <li class="col-md-12 col-lg-4">
-      <a href="index.html" class="home-dash">
+      <a href="editAboutUs.php" class="home-dash">
         <i class="fa-solid fa-house-chimney"></i>
         <h5>About Us - Home</h5>
       </a>
     </li>
     <li class="col-md-12 col-lg-4">
-      <a href="index.html" class="home-dash">
+      <a href="#" class="home-dash">
         <i class="fa-solid fa-gear"></i>
         <h5>Categories</h5>
       </a>

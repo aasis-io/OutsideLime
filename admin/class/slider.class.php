@@ -84,7 +84,7 @@ class Slider extends Common
 
     public function getAllSlider()
     {
-        $sql = "select * from slider where status=1 order by created_date desc limit 5";
+        $sql = "select * from slider where status=1 limit 5";
         return $this->select($sql);
     }
 
